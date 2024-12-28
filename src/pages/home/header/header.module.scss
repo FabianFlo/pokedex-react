@@ -1,0 +1,132 @@
+.header {
+    background-color: #644081;
+    padding: 10px 0;
+  
+    .div_header {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 1400px;
+      max-width: calc(100% - 30px);
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+  
+    .div_logo {
+      > img {
+        width: 240px;
+      }
+    }
+  
+    .logoButton {
+      background: none; /* Sin fondo */
+      border: none; /* Sin borde */
+      padding: 0; /* Sin padding */
+      cursor: pointer; /* Cambia a cursor de mano */
+      
+      &:focus {
+        outline: none; /* Elimina outline al hacer focus */
+      }
+  
+      > img {
+        width: 240px; /* Asegura que el logo tenga el tamaño correcto */
+      }
+    }
+  
+    .div_search {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .searchForm {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+  
+    .searchInput {
+      width: 350px;
+      padding: 12px 20px 12px 40px; /* Agregar espacio para el icono a la izquierda */
+      border-radius: 50px;
+      border: 2px solid #007bff;
+      font-size: 16px;
+      outline: none;
+      transition: all 0.3s ease;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      color: #333;
+      font-family: "Arial", sans-serif;
+  
+      /* El icono de la lupa */
+      background-image: url('https://img.icons8.com/ios/452/search.png');
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: 10px center; /* Asegúrate de que esté centrado en el lado izquierdo */
+  
+      &:focus {
+        border-color: #0056b3;
+        box-shadow: 0 0 10px rgba(0, 91, 179, 0.5);
+        width: 350px; /* La barra se expande al hacer foco */
+      }
+    }
+  
+    .searchButton {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 50px;
+      margin-left: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  
+    .suggestions {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: none; /* Ocultar por defecto */
+  
+      &.visible {
+        display: block; /* Mostrar solo si hay sugerencias */
+      }
+  
+      li {
+        padding: 12px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        font-size: 16px;
+        color: #333;
+  
+        &:hover {
+          background-color: #007bff;
+          color: white;
+        }
+      }
+    }
+  
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  }
+  
